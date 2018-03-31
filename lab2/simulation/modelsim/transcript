@@ -1,0 +1,1217 @@
+# Loading project file_write
+project open /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir-filter
+# reading /home/matt/altera_lite/15.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project fir-filter
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 7 errors.
+# 2 compiles, 1 failed with 7 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 40 errors.
+# 2 compiles, 1 failed with 40 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd failed with 13 errors.
+# 2 compiles, 1 failed with 13 errors.
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim work.fir_gen_tb
+# vsim work.fir_gen_tb 
+# Start time: 10:41:43 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+# Can't move the Now cursor.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 550 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 550 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 550 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 750 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim work.fir_gen_tb
+# End time: 11:14:49 on Mar 30,2018, Elapsed time: 0:33:06
+# Errors: 1, Warnings: 54
+# vsim work.fir_gen_tb 
+# Start time: 11:14:49 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+# Compile of fir_gen.vhd was successful.
+# Compile of fir_gen_tb.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim work.fir_gen work.fir_gen_tb
+# End time: 11:17:46 on Mar 30,2018, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 38
+# vsim work.fir_gen work.fir_gen_tb 
+# Start time: 11:17:46 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+add wave  \
+sim:/fir_gen/clk \
+sim:/fir_gen/reset \
+sim:/fir_gen/load_x \
+sim:/fir_gen/c_in \
+sim:/fir_gen/x_in \
+sim:/fir_gen/y_out \
+sim:/fir_gen/x \
+sim:/fir_gen/y \
+sim:/fir_gen/c \
+sim:/fir_gen/p \
+sim:/fir_gen/a
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+vsim work.fir_gen_tb
+# End time: 11:19:42 on Mar 30,2018, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 62
+# vsim work.fir_gen_tb 
+# Start time: 11:19:42 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:22:56 on Mar 30,2018, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 54
+# vsim work.fir_gen_tb 
+# Start time: 11:22:56 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 425 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 475 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 525 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 575 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 625 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 675 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 725 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 775 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 825 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 875 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:28:12 on Mar 30,2018, Elapsed time: 0:05:16
+# Errors: 0, Warnings: 59
+# vsim work.fir_gen_tb 
+# Start time: 11:28:12 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+# Compile of fir_gen_tb.vhd failed with 2 errors.
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:37:15 on Mar 30,2018, Elapsed time: 0:09:03
+# Errors: 0, Warnings: 0
+# vsim work.fir_gen_tb 
+# Start time: 11:37:15 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+run
+run
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:39:24 on Mar 30,2018, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 54
+# vsim work.fir_gen_tb 
+# Start time: 11:39:24 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:41:27 on Mar 30,2018, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 0
+# vsim work.fir_gen_tb 
+# Start time: 11:41:27 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 125 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 1  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 275 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 375 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 425 ns  Iteration: 0  Instance: /fir_gen_tb/dut
+run
+run
+run
+run
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:47:38 on Mar 30,2018, Elapsed time: 0:06:11
+# Errors: 0, Warnings: 63
+# vsim work.fir_gen_tb 
+# Start time: 11:47:38 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Fatal: (vsim-3483) Delay in signal assignment is not ascending.
+#    Time: 0 ps  Iteration: 0  Process: /fir_gen_tb/line__59 File: /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd Line: 62
+# Fatal error in Architecture testbench at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+restart
+run
+# ** Fatal: (vsim-3483) Delay in signal assignment is not ascending.
+#    Time: 0 ps  Iteration: 0  Process: /fir_gen_tb/line__59 File: /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd Line: 62
+# Fatal error in Architecture testbench at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd 62 Architecture testbench
+# 
+# Compile of fir_gen_tb.vhd was successful with warnings.
+vsim work.fir_gen_tb
+# End time: 11:49:58 on Mar 30,2018, Elapsed time: 0:02:20
+# Errors: 15, Warnings: 0
+# vsim work.fir_gen_tb 
+# Start time: 11:49:58 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fir_gen(fpga)
+add wave  \
+sim:/fir_gen_tb/clk_tb \
+sim:/fir_gen_tb/reset_tb \
+sim:/fir_gen_tb/load_x_tb \
+sim:/fir_gen_tb/c_in_tb \
+sim:/fir_gen_tb/x_in_tb \
+sim:/fir_gen_tb/y_out_tb
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(3)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(2)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(1)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /fir_gen_tb/dut/MulGen(0)
+run
+run
+run
+run
+run
+run
+# Compile of FIR-filter.vho was successful.
+# Load canceled
+vsim work.fir_gen_tb
+# End time: 18:42:13 on Mar 30,2018, Elapsed time: 6:52:15
+# Errors: 1, Warnings: 8
+# vsim work.fir_gen_tb 
+# Start time: 18:42:13 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fir_gen_tb(testbench)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.fir_gen(structure)
+# ** Warning: (vsim-8713) /home/matt/de1-soc/FIR-filter/simulation/modelsim/fir_gen_tb.vhd(53): Suspect default binding for component instance 'dut'.
+#    Entity has no generics at all; the component has generics:
+#           L
+#           W4
+#           W3
+#           W2
+#           W1
+#    Time: 0 ps  Iteration: 0  Instance: /fir_gen_tb/dut File: /home/matt/de1-soc/FIR-filter/simulation/modelsim/FIR-filter.vho
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading cyclonev.cyclonev_mac(behavior)
+# ** Warning: Design size of 33321 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# Load canceled

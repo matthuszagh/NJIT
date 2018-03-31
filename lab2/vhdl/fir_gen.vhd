@@ -1,83 +1,92 @@
--- This is a generic FIR filter generator 
--- It uses W1 bit data/coefficients bits
-LIBRARY lpm;                     -- Using predefined packages
-USE lpm.lpm_components.ALL;
-
+-- Simple implementation of a generic transposed FIR filter
+--
+-- Order of operations
+-- 1. The coefficients are loaded, one at a time, starting with coefficient 0.
+-- 2. Once all coefficients have been loaded (4 clock cycles) we raise load_x,
+--	  specifying that we have finished loading the filter coefficients and will
+--	  begin loading the sample.
+-- 3. Combinationally multiply each coefficient with x in parallel.
+-- 4. Take 3 cycles to add all the products together.
+-- 5. Take the 11 most significant bits of the SOP (thus dividing by 256).
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_arith.ALL;
-USE ieee.std_logic_unsigned.ALL;
-
-ENTITY fir_gen IS                      ------> Interface
-  GENERIC (W1 : INTEGER := 9; -- Input bit width
-           W2 : INTEGER := 18;-- Multiplier bit width 2*W1
-           W3 : INTEGER := 19;-- Adder width = W2+log2(L)-1
-           W4 : INTEGER := 11;-- Output bit width
-           L  : INTEGER := 4; -- Filter length 
-        Mpipe : INTEGER := 3  -- Pipeline steps of multiplier
-           );
-  PORT ( clk    : IN  STD_LOGIC;
-         Load_x : IN  STD_LOGIC;
-         x_in   : IN  STD_LOGIC_VECTOR(W1-1 DOWNTO 0);
-         c_in   : IN  STD_LOGIC_VECTOR(W1-1 DOWNTO 0);
-         y_out  : OUT STD_LOGIC_VECTOR(W4-1 DOWNTO 0));
+USE ieee.std_logic_signed.ALL;
+-- -----------------------------------------------------------------------------
+ENTITY fir_gen IS
+	GENERIC(W1 : INTEGER := 9;	-- Input bit width
+			W2 : INTEGER := 18;	-- Multiply bit width [2*W1]
+			W3 : INTEGER := 19;	-- Adder width [W2+Log_2(L)-1]
+			W4 : INTEGER := 11;	-- Output bit width
+			L  : INTEGER := 4	-- Filter length
+	);
+	PORT(clk    : IN  STD_LOGIC;	-- System clock
+	     reset  : IN  STD_LOGIC;	-- Asynchronous reset
+	     load_x : IN  STD_LOGIC;	-- Load/run switch
+	     c_in   : IN  STD_LOGIC_VECTOR(W1-1 DOWNTO 0);  -- Coefficient input
+	     x_in   : IN  STD_LOGIC_VECTOR(W1-1 DOWNTO 0);  -- Data input
+	     y_out  : OUT STD_LOGIC_VECTOR(W4-1 DOWNTO 0)   -- Data output
+	);
 END fir_gen;
-
+-- -----------------------------------------------------------------------------
 ARCHITECTURE fpga OF fir_gen IS
 
-  SUBTYPE N1BIT IS STD_LOGIC_VECTOR(W1-1 DOWNTO 0);
-  SUBTYPE N2BIT IS STD_LOGIC_VECTOR(W2-1 DOWNTO 0);
-  SUBTYPE N3BIT IS STD_LOGIC_VECTOR(W3-1 DOWNTO 0);
-  TYPE ARRAY_N1BIT IS ARRAY (0 TO L-1) OF N1BIT;
-  TYPE ARRAY_N2BIT IS ARRAY (0 TO L-1) OF N2BIT;
-  TYPE ARRAY_N3BIT IS ARRAY (0 TO L-1) OF N3BIT;
+	SUBTYPE SLVW1 IS STD_LOGIC_VECTOR(W1-1 DOWNTO 0);
+	SUBTYPE SLVW2 IS STD_LOGIC_VECTOR(W2-1 DOWNTO 0);
+	SUBTYPE SLVW3 IS STD_LOGIC_VECTOR(W3-1 DOWNTO 0);
+	TYPE A0_L1SLVW1 IS ARRAY (0 TO L-1) OF SLVW1;
+	TYPE A0_L1SLVW2 IS ARRAY (0 TO L-1) OF SLVW2;
+	TYPE A0_L1SLVW3 IS ARRAY (0 TO L-1) OF SLVW3;
 
-  SIGNAL  x  :  N1BIT;
-  SIGNAL  y  :  N3BIT;
-  SIGNAL  c  :  ARRAY_N1BIT; -- Coefficient array 
-  SIGNAL  p  :  ARRAY_N2BIT; -- Product array 
-  SIGNAL  a  :  ARRAY_N3BIT; -- Adder array 
-                                                        
+	SIGNAL x : SLVW1;
+	SIGNAL y : SLVW3;
+	SIGNAL c : A0_L1SLVW1;
+	SIGNAL p : A0_L1SLVW2;
+	SIGNAL a : A0_L1SLVW3;
+
 BEGIN
+	Load: PROCESS(clk, reset)			-- reset must be here since it is async
+	BEGIN
+		IF reset='1' THEN					-- Clear data and coefficients
+			x <= (OTHERS => '0');
+			FOR i IN 0 TO L-1 LOOP
+				c(i) <= (OTHERS => '0');
+			END LOOP;
+		ELSIF rising_edge(clk) THEN
+			IF load_x = '0' THEN			-- Load coefficients
+				c(L-1) <= c_in;
+				FOR i IN L-2 DOWNTO 0 LOOP
+					c(i) <= c(i+1);
+				END LOOP;
+			ELSE							-- Done loading coefficients, load x
+				x <= x_in;
+			END IF;
+		END IF;
+	END PROCESS Load;
 
-  Load: PROCESS            ------> Load data or coefficient
-  BEGIN
-    WAIT UNTIL clk = '1';  
-    IF (Load_x = '0') THEN
-      c(L-1) <= c_in;      -- Store coefficient in register
-      FOR I IN L-2 DOWNTO 0 LOOP  -- Coefficients shift one
-        c(I) <= c(I+1);
-      END LOOP;
-    ELSE
-      x <= x_in;           -- Get one data sample at a time
-    END IF;
-  END PROCESS Load;
+	SOP: PROCESS(clk, reset)
+	BEGIN
+		IF reset='1' THEN		-- Clear adders
+			FOR i IN 0 TO L-1 LOOP
+				a(i) <= (OTHERS => '0');
+			END LOOP;
+		ELSIF rising_edge(clk) THEN
+			FOR i IN 0 TO L-2 LOOP
+				a(i) <= (p(i)(W2-1) & p(i)) + a(i+1);	-- Sign extend p (a is 1
+														-- bit wider than p) and
+														-- add the next a
+			END LOOP;
+			a(L-1) <= p(L-1)(W2-1) & p(L-1);
+		END IF;
+		y <= a(0);
+	END PROCESS SOP;
 
+	-- Instantiate L multipliers
+	MulGen: FOR i IN 0 TO L-1 GENERATE
+		p(i) <= c(i) * x;
+	END GENERATE;
 
-  SOP: PROCESS (clk)        ------> Compute sum-of-products
-  BEGIN
-    IF clk'event and (clk = '1') THEN
-    FOR I IN 0 TO L-2  LOOP      -- Compute the transposed
-      a(I) <= (p(I)(W2-1) & p(I)) + a(I+1); -- filter adds
-    END LOOP;
-    a(L-1) <= p(L-1)(W2-1) & p(L-1);     -- First TAP has 
-    END IF;                              -- only a register
-    y <= a(0);
-  END PROCESS SOP;
-
-  -- Instantiate L pipelined multiplier 
-  MulGen: FOR I IN 0 TO L-1 GENERATE 
-  Muls: lpm_mult               -- Multiply p(i) = c(i) * x;
-        GENERIC MAP ( LPM_WIDTHA => W1, LPM_WIDTHB => W1, 
-                      LPM_PIPELINE => Mpipe,
-                      LPM_REPRESENTATION => "SIGNED", 
-                      LPM_WIDTHP => W2, 
-                      LPM_WIDTHS => W2)  
-        PORT MAP ( clock => clk, dataa => x, 
-                   datab => c(I), result => p(I));
-        END GENERATE;
-
-  y_out <= y(W3-1 DOWNTO W3-W4);  
+	y_out <= y(W3-1 DOWNTO W3-W4);	-- 18 to 8: this is equivalent to dividing
+									-- by 2^8=256		
 
 END fpga;
-
