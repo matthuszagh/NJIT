@@ -1,0 +1,16 @@
+*.v.swp
+db/*
+incremental_db/*
+verilog/*.map.*
+verilog/*.fit.*
+*.rpt
+*.done
+*.summary
+*_info
+*_lib*
+*.xrf
+*.cdb
+*.dpi
+*.mti
+*.pin
+*.wlf
