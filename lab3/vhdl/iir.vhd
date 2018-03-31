@@ -23,11 +23,10 @@ BEGIN
     PROCESS (clk, reset)
     BEGIN
         IF reset='1' THEN
-            x <= (OTHERS => '0');
-            y <= (OTHERS => '0');
+            x <= to_signed(0, W1); y <= to_signed(0, W1);
         ELSIF rising_edge(clk) THEN
             x <= x_in;
-            y <= shift_left(y, 2) + shift_left(y, 1) + x;
+            y <= shift_right(y, 2) + shift_right(y, 1) + x;
         END IF;
     END PROCESS;
     y_out <= y;
