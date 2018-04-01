@@ -1,0 +1,37 @@
+# Loading project iir-filter
+# Compile of iir_tb.vhd was successful with warnings.
+# Compile of iir.vhd was successful.
+# Compile of iir_pipe.vhd was successful.
+# Compile of iir_par_tb.vhd failed with 4 errors.
+# Compile of iir_par.vhd was successful.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of iir_par_tb.vhd was successful with warnings.
+vsim work.iir_par_tb
+# vsim work.iir_par_tb 
+# Start time: 11:20:47 on Apr 01,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.n_bit_int
+# Loading work.iir_par_tb(testbench)
+# Loading work.iir_par(fpga)
+add wave  \
+sim:/iir_par_tb/clk_tb \
+sim:/iir_par_tb/reset_tb \
+sim:/iir_par_tb/x_in_tb \
+sim:/iir_par_tb/x_e_tb \
+sim:/iir_par_tb/x_o_tb \
+sim:/iir_par_tb/y_e_tb \
+sim:/iir_par_tb/y_o_tb \
+sim:/iir_par_tb/clk2_tb \
+sim:/iir_par_tb/y_out_tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
