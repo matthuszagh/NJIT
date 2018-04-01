@@ -35,3 +35,66 @@ run
 run
 run
 run
+add wave  \
+sim:/iir_par_tb/dut/x_e \
+sim:/iir_par_tb/dut/x_o \
+sim:/iir_par_tb/dut/y_e \
+sim:/iir_par_tb/dut/y_o
+add wave  \
+sim:/iir_par_tb/dut/state \
+sim:/iir_par_tb/dut/x_even \
+sim:/iir_par_tb/dut/xd_even \
+sim:/iir_par_tb/dut/x_odd \
+sim:/iir_par_tb/dut/xd_odd \
+sim:/iir_par_tb/dut/x_wait \
+sim:/iir_par_tb/dut/y_even \
+sim:/iir_par_tb/dut/y_odd \
+sim:/iir_par_tb/dut/y_wait \
+sim:/iir_par_tb/dut/y \
+sim:/iir_par_tb/dut/sum_x_even \
+sim:/iir_par_tb/dut/sum_x_odd
+restart
+run
+run
+run
+run
+run
+restart
+run
+run
+run
+# Compile of iir_tb.vhd was successful with warnings.
+# Compile of iir.vhd was successful.
+# Compile of iir_pipe.vhd was successful.
+# Compile of iir_par_tb.vhd was successful with warnings.
+# Compile of iir_par.vhd was successful.
+# Compile of iir_pipe_2_tb.vhd failed with 4 errors.
+# Compile of iir_pipe_2.vhd was successful.
+# 7 compiles, 1 failed with 4 errors.
+# Compile of iir_pipe_2_tb.vhd failed with 4 errors.
+# Compile of iir_pipe_2_tb.vhd was successful with warnings.
+vsim work.iir_pipe_2_tb
+# End time: 17:40:33 on Apr 01,2018, Elapsed time: 6:19:46
+# Errors: 0, Warnings: 0
+# vsim work.iir_pipe_2_tb 
+# Start time: 17:40:33 on Apr 01,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.n_bit_int
+# Loading work.iir_pipe_2_tb(testbench)
+# Loading work.iir_pipe_2(fpga)
+add wave  \
+sim:/iir_pipe_2_tb/clk_tb \
+sim:/iir_pipe_2_tb/reset_tb \
+sim:/iir_pipe_2_tb/x_in_tb \
+sim:/iir_pipe_2_tb/y_out_tb
+run
+run
+run
+run
+run
+run
+run
+run
