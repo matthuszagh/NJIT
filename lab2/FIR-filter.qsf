@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY fir_gen
+set_global_assignment -name TOP_LEVEL_ENTITY fir_transpose
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:45:25  MARCH 20, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
@@ -885,9 +885,11 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to VGA_* -
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to * -entity DE1_SoC_Computer
 set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to * -entity DE1_SoC_Computer
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SoC_Computer -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain.cdf
+set_global_assignment -name VHDL_FILE vhdl/fir_gen.vhd
+set_global_assignment -name VHDL_FILE vhdl/fir_direct.vhd
+set_global_assignment -name VHDL_FILE vhdl/fir_transpose.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name CDF_FILE output_files/Chain.cdf
-set_global_assignment -name VHDL_FILE vhdl/fir_gen.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
