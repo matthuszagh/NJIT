@@ -1,4 +1,5 @@
 *.v.swp
+*.qws
 db/*
 incremental_db/*
 verilog/*.map.*

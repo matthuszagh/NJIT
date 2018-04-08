@@ -5,9 +5,9 @@
 --
 -- y[n] = (9/16)y[n-2] + (3/4)x[n-2] + x[n-1]
 --------------------------------------------------------------------------------
-PACKAGE n_bit_int IS
-    SUBTYPE S15 IS INTEGER RANGE -2**14 TO 2**14-1;
-END PACKAGE;
+--PACKAGE n_bit_int IS
+--    SUBTYPE S15 IS INTEGER RANGE -2**14 TO 2**14-1;
+--END PACKAGE;
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
