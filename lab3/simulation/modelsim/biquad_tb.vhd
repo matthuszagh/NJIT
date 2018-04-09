@@ -14,33 +14,33 @@ ARCHITECTURE testbench OF biquad_tb IS
 
     --- Component Declaration-----------
     COMPONENT biquad IS
-        GENERIC (b0 : S15 := 256;   --  1.0000
-                 b1 : S15 := 542;   --  2.1181
-                 b2 : S15 := 287;   --  1.1220
-                 a1 : S15 := -167;  -- -0.6534
-                 a2 : S15 := 29     --  0.1117
+        GENERIC (b0 : S17;
+                 b1 : S17;
+                 b2 : S17;
+                 a1 : S17;
+                 a2 : S17
         );
         PORT (clk   : IN  STD_LOGIC;
               reset : IN  STD_LOGIC;
-              x_in  : IN  S9;
-              y_out : OUT S15
+              x_in  : IN  S18;
+              y_out : OUT S18
         );
     END COMPONENT;
 
     --- Signal Declaration--------------
     SIGNAL clk_tb   : STD_LOGIC := '0';
     SIGNAL reset_tb : STD_LOGIC := '1';
-    SIGNAL x_in_tb  : S9 := 0;
-    SIGNAL y_out_tb : S15;
+    SIGNAL x_in_tb  : S18 := 0;
+    SIGNAL y_out_tb : S18;
 
 BEGIN
     --- DUT Instantiation---------------
     dut: biquad
-    GENERIC MAP (b0 => 256,   --  1.0000
-                 b1 => 542,   --  2.1181
-                 b2 => 287,   --  1.1220
-                 a1 => -167,  -- -0.6534
-                 a2 => 29     --  0.1117
+    GENERIC MAP (b0 => 16384,   --  1.0000
+                 b1 => 34703,   --  2.1181
+                 b2 => 18383,   --  1.1220
+                 a1 => -10705,  -- -0.6534
+                 a2 => 1830     --  0.1117
     )
     PORT MAP (
         clk   => clk_tb,
