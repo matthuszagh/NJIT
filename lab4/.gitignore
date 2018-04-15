@@ -16,3 +16,5 @@ verilog/*.fit.*
 *.pin
 *.wlf
 *.txt
+*transcript*
+*_vmake*
