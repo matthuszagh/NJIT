@@ -13,15 +13,15 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_arith.ALL;
 USE ieee.std_logic_signed.ALL;
 
-ENTITY db4poly IS                      ------> Interface
+ENTITY db4poly_textbook IS                      ------> Interface
   PORT (clk, reset       : IN  STD_LOGIC;
         x_in             : IN  BITS8;
         clk2             : OUT STD_LOGIC;
         x_e, x_o, g0, g1 : OUT BITS17;
         y_out            : OUT BITS9);
-END db4poly;
+END db4poly_textbook;
 
-ARCHITECTURE fpga OF db4poly IS
+ARCHITECTURE fpga OF db4poly_textbook IS
 
   TYPE STATE_TYPE IS (even, odd);
   SIGNAL state                 : STATE_TYPE;

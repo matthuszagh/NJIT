@@ -18,3 +18,9 @@ verilog/*.fit.*
 *.txt
 *transcript*
 *_vmake*
+*.sft
+*.bak
+*.smsg
+*.jdi
+*.sof
+*.sld
