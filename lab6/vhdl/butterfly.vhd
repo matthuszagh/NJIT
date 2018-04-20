@@ -44,12 +44,12 @@ ARCHITECTURE fpga OF butterfly IS
 
     SIGNAL state       : STATE_TYPE := even;
     SIGNAL clk_div2    : STD_LOGIC := '0';
-    SIGNAL out1_r_ff   : S9;
-    SIGNAL out1_i_ff   : S9;
-    SIGNAL out2_r_ff   : S9;
-    SIGNAL out2_i_ff   : S9;
-    SIGNAL in2_tw_r    : S9;
-    SIGNAL in2_tw_i    : S9;
+    SIGNAL out1_r_ff   : S9 := 0;
+    SIGNAL out1_i_ff   : S9 := 0;
+    SIGNAL out2_r_ff   : S9 := 0;
+    SIGNAL out2_i_ff   : S9 := 0;
+    SIGNAL in2_tw_r    : S9 := 0;
+    SIGNAL in2_tw_i    : S9 := 0;
 
 BEGIN
 
