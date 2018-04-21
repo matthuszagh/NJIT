@@ -9,50 +9,51 @@ USE ieee.numeric_std.ALL;
 USE work.n_bit_int.ALL;
 --------------------------------------------------------------------------------
 ENTITY fft8 IS
-    GENERIC (LENGTH      : INTEGER := 8;
+    GENERIC (LENGTH      : INTEGER := 8;    -- Filter length.
+             STAGES      : INTEGER := 3;    -- lg(LENGTH)
              LENGTH_M1   : INTEGER := 7;
              LENGTH_D2   : INTEGER := 4;
              LENGTH_D2M1 : INTEGER := 3
     );
     PORT (clk     : IN  STD_LOGIC;
           reset   : IN  STD_LOGIC;
-          x_in    : IN  S9;
-          X_r_out : OUT A0_7S9;
-          X_i_out : OUT A0_7S9
+          x_in    : IN  S10;
+          X_r_out : OUT A0_7S10;
+          X_i_out : OUT A0_7S10
     );
 END ENTITY fft8;
 --------------------------------------------------------------------------------
 ARCHITECTURE fpga OF fft8 IS
 
-    TYPE CONST_ARR IS ARRAY (0 TO LENGTH_D2M1) OF A0_2S16;
+    TYPE CONST_ARR IS ARRAY (0 TO LENGTH_D2M1) OF A0_2S17;
 
     CONSTANT W : CONST_ARR := 
-            (( 16384,  16384,  16384),  -- 1
-             ( 11585,      0,  23170),  -- cos( pi/4) - isin( pi/4)
-             (     0, -16384,  16384),  -- -i
-             (-11585,      0, -23170)); -- cos(3pi/4) - isin(3pi/4)
+            (( 32768,  32768,  32768),  -- 1
+             ( 23170,      0,  46340),  -- cos( pi/4) - isin( pi/4)
+             (     0, -32768,  32768),  -- -i
+             (-23170,      0, -46340)); -- cos(3pi/4) - isin(3pi/4)
 
     SIGNAL count        : INTEGER RANGE -1 TO LENGTH_M1 := LENGTH_M1;
-    SIGNAL x            : A0_7S9 := (OTHERS => 0);
-    SIGNAL out_r_int_s1 : A0_7S9 := (OTHERS => 0);
-    SIGNAL out_i_int_s1 : A0_7S9 := (OTHERS => 0);
-    SIGNAL out_r_int_s2 : A0_7S9 := (OTHERS => 0);
-    SIGNAL out_i_int_s2 : A0_7S9 := (OTHERS => 0);
+    SIGNAL x            : A0_7S10 := (OTHERS => 0);
+    SIGNAL out_r_int_s1 : A0_7S10 := (OTHERS => 0);
+    SIGNAL out_i_int_s1 : A0_7S10 := (OTHERS => 0);
+    SIGNAL out_r_int_s2 : A0_7S10 := (OTHERS => 0);
+    SIGNAL out_i_int_s2 : A0_7S10 := (OTHERS => 0);
 
     COMPONENT butterfly IS
         PORT (clk    : IN  STD_LOGIC;
               reset  : IN  STD_LOGIC;
-              in1_r  : IN  S9;
-              in1_i  : IN  S9;
-              in2_r  : IN  S9;
-              in2_i  : IN  S9;
-              tw_r   : IN  S16;
-              tw_rpi : IN  S16;
-              tw_rmi : IN  S16;
-              out1_r : OUT S9;
-              out1_i : OUT S9;
-              out2_r : OUT S9;
-              out2_i : OUT S9
+              in1_r  : IN  S10;
+              in1_i  : IN  S10;
+              in2_r  : IN  S10;
+              in2_i  : IN  S10;
+              tw_r   : IN  S17;
+              tw_rpi : IN  S17;
+              tw_rmi : IN  S17;
+              out1_r : OUT S10;
+              out1_i : OUT S10;
+              out2_r : OUT S10;
+              out2_i : OUT S10
         );
     END COMPONENT butterfly;
 

@@ -11,38 +11,38 @@ USE work.n_bit_int.ALL;
 ENTITY fft4 IS
     PORT (clk     : IN  STD_LOGIC;
           reset   : IN  STD_LOGIC;
-          x_in    : IN  S9;
-          X_r_out : OUT A0_3S9;
-          X_i_out : OUT A0_3S9
+          x_in    : IN  S10;
+          X_r_out : OUT A0_3S10;
+          X_i_out : OUT A0_3S10
     );
 END ENTITY fft4;
 --------------------------------------------------------------------------------
 ARCHITECTURE fpga OF fft4 IS
 
-    TYPE CONST_ARR IS ARRAY (0 TO 1) OF A0_2S16;
+    TYPE CONST_ARR IS ARRAY (0 TO 1) OF A0_2S17;
 
-    CONSTANT W : CONST_ARR := ((16384, 16384, 16384),
-                               (0, -16384, 16384));
+    CONSTANT W : CONST_ARR := ((32768, 32768, 32768),
+                               (0, -32768, 32768));
 
     SIGNAL count     : INTEGER RANGE -1 TO 3 := 3;
-    SIGNAL x         : A0_3S9 := (OTHERS => 0);
-    SIGNAL out_r_int : A0_3S9 := (OTHERS => 0);
-    SIGNAL out_i_int : A0_3S9 := (OTHERS => 0);
+    SIGNAL x         : A0_3S10 := (OTHERS => 0);
+    SIGNAL out_r_int : A0_3S10 := (OTHERS => 0);
+    SIGNAL out_i_int : A0_3S10 := (OTHERS => 0);
 
     COMPONENT butterfly IS
         PORT (clk    : IN  STD_LOGIC;
               reset  : IN  STD_LOGIC;
-              in1_r  : IN  S9;
-              in1_i  : IN  S9;
-              in2_r  : IN  S9;
-              in2_i  : IN  S9;
-              tw_r   : IN  S16;
-              tw_rpi : IN  S16;
-              tw_rmi : IN  S16;
-              out1_r : OUT S9;
-              out1_i : OUT S9;
-              out2_r : OUT S9;
-              out2_i : OUT S9
+              in1_r  : IN  S10;
+              in1_i  : IN  S10;
+              in2_r  : IN  S10;
+              in2_i  : IN  S10;
+              tw_r   : IN  S17;
+              tw_rpi : IN  S17;
+              tw_rmi : IN  S17;
+              out1_r : OUT S10;
+              out1_i : OUT S10;
+              out2_r : OUT S10;
+              out2_i : OUT S10
         );
     END COMPONENT butterfly;
 

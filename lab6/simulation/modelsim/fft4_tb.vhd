@@ -16,17 +16,17 @@ ARCHITECTURE testbench OF fft4_tb IS
     COMPONENT fft4 IS
         PORT (clk     : IN  STD_LOGIC;
               reset   : IN  STD_LOGIC;
-              x_in    : IN  S9;
-              X_r_out : OUT A0_3S9;
-              X_i_out : OUT A0_3S9
+              x_in    : IN  S10;
+              X_r_out : OUT A0_3S10;
+              X_i_out : OUT A0_3S10
         );
     END COMPONENT fft4;
 
     SIGNAL clk_tb     : STD_LOGIC := '0';
     SIGNAL reset_tb   : STD_LOGIC := '1';
-    SIGNAL x_in_tb    : S9 := 0;
-    SIGNAL X_r_out_tb : A0_3S9;
-    SIGNAL X_i_out_tb : A0_3S9;
+    SIGNAL x_in_tb    : S10 := 0;
+    SIGNAL X_r_out_tb : A0_3S10;
+    SIGNAL X_i_out_tb : A0_3S10;
 
 BEGIN
 
