@@ -14,10 +14,8 @@ END ENTITY fft8_tb;
 ARCHITECTURE testbench OF fft8_tb IS
 
     COMPONENT fft8 IS
-        GENERIC (LENGTH      : INTEGER := 8;
-                 LENGTH_M1   : INTEGER := 7;
-                 LENGTH_D2   : INTEGER := 4;
-                 LENGTH_D2M1 : INTEGER := 3
+        GENERIC (LENGTH : INTEGER := 8;
+                 STAGES : INTEGER := 3
         );
         PORT (clk     : IN  STD_LOGIC;
               reset   : IN  STD_LOGIC;
