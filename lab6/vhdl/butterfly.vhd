@@ -11,17 +11,17 @@ USE work.n_bit_int.ALL;
 ENTITY butterfly IS
     PORT (clk    : IN  STD_LOGIC;
           reset  : IN  STD_LOGIC;
-          in1_r  : IN  S10;
-          in1_i  : IN  S10;
-          in2_r  : IN  S10;
-          in2_i  : IN  S10;
+          in1_r  : IN  S12;
+          in1_i  : IN  S12;
+          in2_r  : IN  S12;
+          in2_i  : IN  S12;
           tw_r   : IN  S17;
           tw_rpi : IN  S17;
           tw_rmi : IN  S17;
-          out1_r : OUT S10;
-          out1_i : OUT S10;
-          out2_r : OUT S10;
-          out2_i : OUT S10
+          out1_r : OUT S12;
+          out1_i : OUT S12;
+          out2_r : OUT S12;
+          out2_i : OUT S12
     );
 END ENTITY butterfly;
 --------------------------------------------------------------------------------
@@ -32,24 +32,24 @@ ARCHITECTURE fpga OF butterfly IS
     COMPONENT complex_mult IS
         PORT (clk    : IN  STD_LOGIC;
               reset  : IN  STD_LOGIC;
-              in_r   : IN  S10;
-              in_i   : IN  S10;
+              in_r   : IN  S12;
+              in_i   : IN  S12;
               tw_r   : IN  S17; -- twiddle factors will take 17 bits / 32768
               tw_rpi : IN  S17; -- twiddle real + imaginary
               tw_rmi : IN  S17; -- twiddle real - imaginary
-              out_r  : OUT S10;
-              out_i  : OUT S10
+              out_r  : OUT S12;
+              out_i  : OUT S12
         );
     END COMPONENT complex_mult;
 
     SIGNAL state       : STATE_TYPE := even;
     SIGNAL clk_div2    : STD_LOGIC := '0';
-    SIGNAL out1_r_ff   : S10 := 0;
-    SIGNAL out1_i_ff   : S10 := 0;
-    SIGNAL out2_r_ff   : S10 := 0;
-    SIGNAL out2_i_ff   : S10 := 0;
-    SIGNAL in2_tw_r    : S10 := 0;
-    SIGNAL in2_tw_i    : S10 := 0;
+    SIGNAL out1_r_ff   : S12 := 0;
+    SIGNAL out1_i_ff   : S12 := 0;
+    SIGNAL out2_r_ff   : S12 := 0;
+    SIGNAL out2_i_ff   : S12 := 0;
+    SIGNAL in2_tw_r    : S12 := 0;
+    SIGNAL in2_tw_i    : S12 := 0;
 
 BEGIN
 

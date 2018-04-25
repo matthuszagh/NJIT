@@ -16,33 +16,33 @@ ARCHITECTURE testbench OF butterfly_tb IS
     COMPONENT butterfly IS
         PORT (clk    : IN  STD_LOGIC;
               reset  : IN  STD_LOGIC;
-              in1_r  : IN  S10;
-              in1_i  : IN  S10;
-              in2_r  : IN  S10;
-              in2_i  : IN  S10;
+              in1_r  : IN  S12;
+              in1_i  : IN  S12;
+              in2_r  : IN  S12;
+              in2_i  : IN  S12;
               tw_r   : IN  S17;
               tw_rpi : IN  S17;
               tw_rmi : IN  S17;
-              out1_r : OUT S10;
-              out1_i : OUT S10;
-              out2_r : OUT S10;
-              out2_i : OUT S10
+              out1_r : OUT S12;
+              out1_i : OUT S12;
+              out2_r : OUT S12;
+              out2_i : OUT S12
         );
     END COMPONENT butterfly;
 
     SIGNAL clk_tb    : STD_LOGIC := '0';
     SIGNAL reset_tb  : STD_LOGIC := '1';
-    SIGNAL in1_r_tb  : S10 := 20;
-    SIGNAL in1_i_tb  : S10 := 15;
-    SIGNAL in2_r_tb  : S10 := 50;
-    SIGNAL in2_i_tb  : S10 := 60;
+    SIGNAL in1_r_tb  : S12 := 20;
+    SIGNAL in1_i_tb  : S12 := 15;
+    SIGNAL in2_r_tb  : S12 := 50;
+    SIGNAL in2_i_tb  : S12 := 60;
     SIGNAL tw_r_tb   : S17 := 8192;
     SIGNAL tw_rpi_tb : S17 := 22381;
     SIGNAL tw_rmi_tb : S17 := -5997;
-    SIGNAL out1_r_tb : S10;
-    SIGNAL out1_i_tb : S10;
-    SIGNAL out2_r_tb : S10;
-    SIGNAL out2_i_tb : S10;
+    SIGNAL out1_r_tb : S12;
+    SIGNAL out1_i_tb : S12;
+    SIGNAL out2_r_tb : S12;
+    SIGNAL out2_i_tb : S12;
 
 BEGIN
 

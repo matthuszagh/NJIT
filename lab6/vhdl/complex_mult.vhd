@@ -12,20 +12,20 @@ USE work.n_bit_int.ALL;
 ENTITY complex_mult IS
     PORT (clk    : IN  STD_LOGIC;
           reset  : IN  STD_LOGIC;
-          in_r   : IN  S10;
-          in_i   : IN  S10;
+          in_r   : IN  S12;
+          in_i   : IN  S12;
           tw_r   : IN  S17; -- twiddle factors will take 17 bits / 32768
           tw_rpi : IN  S17; -- twiddle real + imaginary
           tw_rmi : IN  S17; -- twiddle real - imaginary
-          out_r  : OUT S10;
-          out_i  : OUT S10
+          out_r  : OUT S12;
+          out_i  : OUT S12
     );
 END ENTITY complex_mult;
 --------------------------------------------------------------------------------
 ARCHITECTURE fpga OF complex_mult IS
     
-    SIGNAL r : S10;
-    SIGNAL i : S10;
+    SIGNAL r : S12;
+    SIGNAL i : S12;
 
 BEGIN
 
