@@ -1,4 +1,4 @@
--- fft4_2_tb.vhd
+-- fft4_tb.vhd
 --
 -- A testbench for the 4-length FFT using the Cooley-Tukey algorithm.
 --------------------------------------------------------------------------------
@@ -9,12 +9,12 @@ USE work.n_bit_int.ALL;
 
 USE work.default_fft4_declarations.ALL;
 --------------------------------------------------------------------------------
-ENTITY fft4_2_tb IS
-END ENTITY fft4_2_tb;
+ENTITY fft4_tb IS
+END ENTITY fft4_tb;
 --------------------------------------------------------------------------------
-ARCHITECTURE testbench OF fft4_2_tb IS
+ARCHITECTURE testbench OF fft4_tb IS
 
-    COMPONENT fft4_2 IS
+    COMPONENT fft4 IS
         GENERIC (CONSTANT w : twiddle_array_type :=
                     ((32768, 32768, 32768),
                      (0, -32768, 32768))
@@ -25,7 +25,7 @@ ARCHITECTURE testbench OF fft4_2_tb IS
               X_r_out : OUT data_array_type;
               X_i_out : OUT data_array_type
         );
-    END COMPONENT fft4_2;
+    END COMPONENT fft4;
 
     SIGNAL clk_tb     : STD_LOGIC := '0';
     SIGNAL reset_tb   : STD_LOGIC := '1';
@@ -35,7 +35,7 @@ ARCHITECTURE testbench OF fft4_2_tb IS
 
 BEGIN
 
-    dut: fft4_2 PORT MAP (clk     => clk_tb,
+    dut: fft4 PORT MAP (clk     => clk_tb,
                         reset   => reset_tb,
                         x_in    => x_in_tb,
                         X_r_out => X_r_out_tb,

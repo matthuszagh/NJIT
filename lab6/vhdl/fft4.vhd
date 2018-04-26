@@ -1,4 +1,4 @@
--- fft4_2.vhd
+-- fft4.vhd
 --
 -- A 8-length FFT using the Cooley-Tukey algorithm.
 -----Package:-------------------------------------------------------------------
@@ -7,15 +7,15 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 USE work.n_bit_int.ALL;
 
-PACKAGE fft_declarations IS
+PACKAGE fft4_declarations IS
     GENERIC (CONSTANT length : INTEGER; -- Filter length.
              CONSTANT stages : INTEGER  -- M = lg(length)
     );
     TYPE data_array_type IS ARRAY (0 TO length-1) OF S12;
     TYPE twiddle_array_type IS ARRAY (0 TO length/2 - 1) OF A0_2S17;
-END PACKAGE fft_declarations;
+END PACKAGE fft4_declarations;
 -----Main code:-----------------------------------------------------------------
-PACKAGE default_fft4_declarations IS NEW work.fft_declarations
+PACKAGE default_fft4_declarations IS NEW work.fft4_declarations
     GENERIC MAP (length => 4,
                  stages => 2
     );
@@ -26,7 +26,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 USE work.n_bit_int.ALL;
 --------------------------------------------------------------------------------
-ENTITY fft4_2 IS
+ENTITY fft4 IS
     GENERIC (CONSTANT w : twiddle_array_type :=
                 ((32768, 32768, 32768),
                  (0, -32768, 32768))
@@ -37,9 +37,9 @@ ENTITY fft4_2 IS
           X_r_out : OUT data_array_type;
           X_i_out : OUT data_array_type
     );
-END ENTITY fft4_2;
+END ENTITY fft4;
 --------------------------------------------------------------------------------
-ARCHITECTURE fpga OF fft4_2 IS
+ARCHITECTURE fpga OF fft4 IS
 
     TYPE A0_M_A0_LS12 IS ARRAY (0 TO stages) OF data_array_type;
 

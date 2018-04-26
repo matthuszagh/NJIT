@@ -19,7 +19,7 @@ ARCHITECTURE testbench OF fft8_tb IS
                    (( 32768,  32768,  32768),  -- 1
                     ( 23170,      0,  46340),  -- cos( pi/4) - isin( pi/4)
                     (     0, -32768,  32768),  -- -i
-                    (-23170,      0, -46340))  -- cos(3pi/4) - isin(3pi/4)
+                    (-23170, -46340,      0))  -- cos(3pi/4) - isin(3pi/4)
         );
         PORT (clk     : IN  STD_LOGIC;
               reset   : IN  STD_LOGIC;
