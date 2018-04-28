@@ -2,92 +2,126 @@
 --
 -- A butterfly processor.
 --------------------------------------------------------------------------------
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-USE work.n_bit_int.ALL;
---------------------------------------------------------------------------------
-ENTITY butterfly IS
-    PORT (clk    : IN  STD_LOGIC;
-          reset  : IN  STD_LOGIC;
-          in1_r  : IN  S12;
-          in1_i  : IN  S12;
-          in2_r  : IN  S12;
-          in2_i  : IN  S12;
-          tw_r   : IN  S17;
-          tw_rpi : IN  S17;
-          tw_rmi : IN  S17;
-          out1_r : OUT S12;
-          out1_i : OUT S12;
-          out2_r : OUT S12;
-          out2_i : OUT S12
+package butterfly_pkg is
+    generic (
+        constant data_precision    : natural;
+        constant twiddle_precision : natural
     );
-END ENTITY butterfly;
---------------------------------------------------------------------------------
-ARCHITECTURE fpga OF butterfly IS
 
-    TYPE STATE_TYPE is (even, odd);
-
-    COMPONENT complex_mult IS
-        PORT (clk    : IN  STD_LOGIC;
-              reset  : IN  STD_LOGIC;
-              in_r   : IN  S12;
-              in_i   : IN  S12;
-              tw_r   : IN  S17; -- twiddle factors will take 17 bits / 32768
-              tw_rpi : IN  S17; -- twiddle real + imaginary
-              tw_rmi : IN  S17; -- twiddle real - imaginary
-              out_r  : OUT S12;
-              out_i  : OUT S12
+    component butterfly is
+        generic (
+            constant data_precision    : natural := data_precision;
+            constant twiddle_precision : natural := twiddle_precision
         );
-    END COMPONENT complex_mult;
+        port (
+            clk    : in  std_logic;
+            reset  : in  std_logic;
+            in1_r  : in  signed(data_precision-1 downto 0);
+            in1_i  : in  signed(data_precision-1 downto 0);
+            in2_r  : in  signed(data_precision-1 downto 0);
+            in2_i  : in  signed(data_precision-1 downto 0);
+            tw_r   : in  signed(twiddle_precision-1 downto 0);
+            tw_rpi : in  signed(twiddle_precision-1 downto 0);
+            tw_rmi : in  signed(twiddle_precision-1 downto 0);
+            out1_r : out signed(data_precision-1 downto 0);
+            out1_i : out signed(data_precision-1 downto 0);
+            out2_r : out signed(data_precision-1 downto 0);
+            out2_i : out signed(data_precision-1 downto 0)
+        );
+    end component;
+end package;
 
-    SIGNAL state       : STATE_TYPE := even;
-    SIGNAL clk_div2    : STD_LOGIC := '0';
-    SIGNAL out1_r_ff   : S12 := 0;
-    SIGNAL out1_i_ff   : S12 := 0;
-    SIGNAL out2_r_ff   : S12 := 0;
-    SIGNAL out2_i_ff   : S12 := 0;
-    SIGNAL in2_tw_r    : S12 := 0;
-    SIGNAL in2_tw_i    : S12 := 0;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+--------------------------------------------------------------------------------
+entity butterfly is
+    generic (
+        constant data_precision    : natural;
+        constant twiddle_precision : natural
+    );
+    port (
+        clk    : in  std_logic;
+        reset  : in  std_logic;
+        in1_r  : in  signed(data_precision-1 downto 0);
+        in1_i  : in  signed(data_precision-1 downto 0);
+        in2_r  : in  signed(data_precision-1 downto 0);
+        in2_i  : in  signed(data_precision-1 downto 0);
+        tw_r   : in  signed(twiddle_precision-1 downto 0);
+        tw_rpi : in  signed(twiddle_precision-1 downto 0);
+        tw_rmi : in  signed(twiddle_precision-1 downto 0);
+        out1_r : out signed(data_precision-1 downto 0);
+        out1_i : out signed(data_precision-1 downto 0);
+        out2_r : out signed(data_precision-1 downto 0);
+        out2_i : out signed(data_precision-1 downto 0)
+    );
+end entity;
+--------------------------------------------------------------------------------
+architecture fpga of butterfly is
+    package complex_multiply_pkg_inst is new work.complex_multiply_pkg
+        generic map (
+            data_precision    => data_precision,
+            twiddle_precision => twiddle_precision
+        );
+    use complex_multiply_pkg_inst.all;
 
-BEGIN
+    type state_type is (even, odd);
 
-    Fast_clk: PROCESS (clk, reset) IS
-    BEGIN
-        IF reset='1' THEN
+    signal state       : state_type := even;
+    signal clk_div2    : std_logic := '0';
+    signal out1_r_ff   : signed(data_precision-1 downto 0) := (others => '0');
+    signal out1_i_ff   : signed(data_precision-1 downto 0) := (others => '0');
+    signal out2_r_ff   : signed(data_precision-1 downto 0) := (others => '0');
+    signal out2_i_ff   : signed(data_precision-1 downto 0) := (others => '0');
+    signal in2_tw_r    : signed(data_precision-1 downto 0) := (others => '0');
+    signal in2_tw_i    : signed(data_precision-1 downto 0) := (others => '0');
+
+begin
+
+    fast_clk: process (clk, reset) is
+    begin
+        if reset='1' then
             clk_div2 <= '0';
-        ELSIF rising_edge(clk) THEN
-            IF state=even THEN
+        elsif rising_edge(clk) then
+            if state=even then
                 clk_div2 <= '1';
                 state <= odd;
-            ELSE
+            else
                 clk_div2 <= '0';
                 state <= even;
-            END IF;
-        END IF;
-    END PROCESS Fast_clk;
+            end if;
+        end if;
+    end process fast_clk;
 
-    Slow_clk: PROCESS (clk_div2) IS
-    BEGIN
-        IF falling_edge(clk_div2) THEN
+    slow_clk: process (clk_div2) is
+    begin
+        if falling_edge(clk_div2) then
             out1_r_ff <= in1_r + in2_tw_r;
             out1_i_ff <= in1_i + in2_tw_i;
             out2_r_ff <= in1_r - in2_tw_r;
             out2_i_ff <= in1_i - in2_tw_i;
-        END IF;
-    END PROCESS Slow_clk;
+        end if;
+    end process slow_clk;
 
-    mul: complex_mult
-        PORT MAP (clk    => clk,
-                  reset  => reset,
-                  in_r   => in2_r,
-                  in_i   => in2_i,
-                  tw_r   => tw_r,
-                  tw_rpi => tw_rpi,
-                  tw_rmi => tw_rmi,
-                  out_r  => in2_tw_r,
-                  out_i  => in2_tw_i
+    mul: complex_multiply
+        generic map (
+            data_precision    => data_precision,
+            twiddle_precision => twiddle_precision
+        )
+        port map (
+            clk    => clk,
+            reset  => reset,
+            in_r   => in2_r,
+            in_i   => in2_i,
+            tw_r   => tw_r,
+            tw_rpi => tw_rpi,
+            tw_rmi => tw_rmi,
+            out_r  => in2_tw_r,
+            out_i  => in2_tw_i
         );
 
     out1_r <= out1_r_ff;
@@ -95,4 +129,4 @@ BEGIN
     out2_r <= out2_r_ff;
     out2_i <= out2_i_ff;
 
-END ARCHITECTURE fpga;
+end architecture fpga;
