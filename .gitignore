@@ -1,7 +1,7 @@
 *.v.swp
 *.qws
-db/*
-incremental_db/*
+*/db/*
+*/incremental_db/*
 verilog/*.map.*
 verilog/*.fit.*
 *.rpt
@@ -30,3 +30,15 @@ verilog/*.fit.*
 *.ddb
 *.flock
 *.sci
+*.cmp.*
+*.cbx.*
+*.kpt
+*.hsd
+*.hif
+*.bpm
+*.logdb
+*.ammdb
+*.sig
+*.tdb
+*.lpc.*
+*.tdf
