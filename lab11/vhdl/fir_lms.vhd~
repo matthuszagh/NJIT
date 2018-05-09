@@ -1,0 +1,68 @@
+-- fir_lms.vhd
+--
+-- Performs an adaptive filtering technique to remove noise from a signal
+-- when that noise is not constant or predictable. This uses an LMS algorithm
+-- to perform the adaptive filtering.
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity fir_lms is
+    generic(
+        w      : integer := 8;  -- Data precision.
+        mu     : signed(3 downto 0) := to_signed(2, 4);  -- right shift 3 bits, so = 1/4 (i.e. effective range is 1/8 to 7/8)
+        length : integer := 2   -- Filter length.
+    );
+    port(
+        clk   : in  std_logic;                -- Clock signal.
+        rst   : in  std_logic;                -- Asynchronous reset.
+        x_in  : in  signed(w-1 downto 0);     -- Input noise reference.
+        d_in  : in  signed(w-1 downto 0);     -- Input signal + noise.
+        e_out : out signed(w-1 downto 0)      -- Filtered output (hopefully signal) which is also the error.
+    );
+end entity;
+
+architecture fpga of fir_lms is
+    type arr is array (0 to length-1) of signed(w-1 downto 0);
+    type state_type is (even, odd);
+
+    signal state : state_type := even;
+    signal f     : arr := (others => (others => '0'));
+    signal x     : arr := (others => (others => '0'));
+    signal d     : signed(w-1 downto 0) := (others => '0');
+    signal y     : signed(w-1 downto 0) := (others => '0');
+    signal e     : signed(w-1 downto 0) := (others => '0');
+    signal muex  : arr := (others => (others => '0'));
+
+begin
+    process(rst, clk)
+    begin
+        if rst='1' then
+            x     <= (others => (others => '0'));
+            f     <= (others => (others => '0'));
+            d     <= (others => '0');
+            e     <= (others => '0');
+            state <= even;
+        elsif rising_edge(clk) and state=even then
+            d    <= d_in;
+            x(0) <= x_in;
+            for i in 1 to length-1 loop     -- Shift x.
+                x(i) <= x(i-1);
+            end loop;
+            for i in 0 to length-1 loop     -- Update the filter coefficients.
+                f(i) <= f(i) + muex(i);
+            end loop;
+            state <= odd;
+        elsif rising_edge(clk) and state=odd then
+            e     <= d - resize(x(0)*f(0) + x(1)*f(1), w);     -- This line does not work if filter is length > 2!!!
+            state <= even;
+        end if;
+    end process;
+
+    muex_mult: for i in 0 to length-1 generate
+        muex(i) <= resize(mu*e*x(i)/8, w);
+    end generate;
+
+    e_out <= e;
+end architecture;
